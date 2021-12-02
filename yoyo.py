@@ -21,7 +21,7 @@ def pumpeth(sc):
 
 def commit(sc):
     print('Commit')
-    subprocess.call(['/root/Desktop/peth/auto.sh'])
+    subprocess.call(['/root/Desktop/auto.sh'])
     print('Done')
   
     s.enter(30, 1, pumpeth, (s,))
