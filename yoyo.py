@@ -16,6 +16,20 @@ def pumpeth(sc):
     with open('/root/Desktop/peth/peth.json', 'w') as file:
       file.write(filedata)
   
+    s.enter(5, 1, bite, (s,))
+
+
+def bite(sc):
+    print('Enter')
+    with open('/root/Desktop/peth/bitecoin.json', 'r') as file :
+      filedata = file.read()
+
+    filedata = filedata.replace(']\n[', ',')
+    filedata = filedata.replace('][', ',')
+
+    with open('/root/Desktop/peth/bitecoin.json', 'w') as file:
+      file.write(filedata)
+  
     s.enter(5, 1, commit, (s,))
     
 
